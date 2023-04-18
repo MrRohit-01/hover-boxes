@@ -1,7 +1,7 @@
 * {
    margin: 0;
    padding: 0;
-   background-color: #f5ebe0;
+   background-color: #000000;
 }
 
 .one {
@@ -30,10 +30,17 @@
    float: left;
    background-color: brown;
    transition: 0.6s;
+   animation-name: hidebox1;
+   animation-duration: .8s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   z-index: 1;
+   
 }
 
 .b1:hover {
    background-color: #8338ec;
+   transition: 1s;
 }
 
 .b2 {
@@ -42,7 +49,7 @@
    float: right;
    clear: left;
    background-color: rgb(34, 213, 18);
-   transition: 0.6s;
+   z-index: 2;
 }
 
 .b2:hover {
@@ -56,6 +63,11 @@
    clear: left;
    background-color: rgb(222, 195, 25);
    transition: 0.6s;
+   animation-name: movebox3;
+   animation-duration: .8s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   z-index: 3;
 }
 
 .b3:hover {
@@ -69,8 +81,38 @@
    clear: left;
    background-color: rgb(13, 50, 216);
    transition: 0.6s;
+   animation-name: movebox4;
+   animation-duration: .8s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   z-index: 4;
 }
 
 .b4:hover {
    background-color: #fb6f92;
+}
+
+@keyframes hidebox1{
+   0%{
+      transform: translate(200px);
+   }
+   100%{
+      transform: translate(0px);
+   }
+}
+@keyframes movebox3{
+   0%{
+      transform: translate(-200px);
+   }
+   100%{
+      transform: translate(0px);
+   }
+}
+@keyframes movebox4{
+   0%{
+      transform: translate(-400px);
+   }
+   100%{
+      transform: translate(0px);
+   }
 }
